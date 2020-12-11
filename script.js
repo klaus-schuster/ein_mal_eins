@@ -32,9 +32,11 @@ function checkResult() {
     //console.log("richtig");
     points++;
     document.getElementById("punkte").style.display = "block";
+    document.getElementById("punkte").style.backgroundColor = "rgba(201, 254, 216, 0.45)";
   } else {
     //console.log("falsch");
     points = points -  2;
+    document.getElementById("punkte").style.backgroundColor = "rgba(255, 166, 164, 0.45)";
     if (points < 0) {
       points = 0;
       document.getElementById("punkte").style.display = "none";
