@@ -17,7 +17,7 @@ function setElements() {
   form_points.innerHTML = String("Punkte: " + points);
   return zahl1 * zahl2;
 }
-
+//
 let result = setElements();
 
 document.getElementById("inputEingabe").focus();
