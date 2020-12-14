@@ -9,7 +9,22 @@
 
 <body>
     <header>
-        <h1>Eine kleine Übungsmaschine</h1>
+        <div>
+            <p id="header">
+                Eine kleine Übungsmaschine
+            </p>
+            <div id="punkte_small">
+                <p id="punkteStr_small">
+                    Punkte: 0
+                </p>
+                <p id="highscore_small">
+                    Highscore: 0
+                </p>
+                <p id="countdown_small">
+                    Countdown: -
+                </p>
+            </div>
+        </div>
     </header>
 
 
@@ -18,33 +33,35 @@
             Punkte: 0
         </p>
         <p id="countdown">
-            countdown
-        </p>      
+            Countdown: -
+        </p>
         <p id="highscore">
-            &nbsp;
+            Highscore: 0
         </p>
 
     </div>
 
     <div class="section aufgabe">
-        <p class="v" id="val1">a</p>
-        <p class="x">X</p>
-        <p class="v" id="val2">b</p>
-    
+        <div class="kasten_3">
+            <p class="v" id="val1">a</p>
+            <p class="x">X</p>
+            <p class="v" id="val2">b</p>
+        </div>
+
         <div class="eingabe">
 
             <input id="inputEingabe" type="number" inputmode="numeric"><br>
             <button id="btn" type="button">Abschicken</button>
-    
-    
+
+
         </div>
-    
+
     </div>
 
 
     <footer>
         <div>
-        <p>© Klaus Schuster 2020</p>  
+            <p>© Klaus Schuster 2020</p>
         </div>
     </footer>
 

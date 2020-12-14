@@ -3,6 +3,9 @@ const form_val2 = document.getElementById("val2");
 const form_points = document.getElementById("punkteStr");
 const form_coutndown = document.getElementById("countdown");
 const form_highscore = document.getElementById("highscore");
+const form_points_small = document.getElementById("punkteStr_small");
+const form_coutndown_small = document.getElementById("countdown_small");
+const form_highscore_small = document.getElementById("highscore_small");
 
 let countdown_timer = 5;
 let upperLimit = 10;
@@ -19,6 +22,7 @@ function setElements() {
   form_val1.innerHTML = String(zahl1);
   form_val2.innerHTML = String(zahl2);
   form_points.innerHTML = String("Punkte: " + points);
+  form_points_small.innerHTML = String("Punkte: " + points);
   return zahl1 * zahl2;
 }
 
@@ -39,11 +43,12 @@ function checkResult() {
     if (points > highscore) {
       highscore = points;
       form_highscore.innerHTML = String("Highscore: " + highscore);
+      form_highscore_small.innerHTML = String("Highscore: " + highscore);
     }
 
-    document.getElementById("punkte").style.display = "block";
-    document.getElementById("punkte").style.backgroundColor =
-      "rgba(201, 254, 216, 0.45)";
+    //document.getElementById("punkte").style.display = "block";
+    document.getElementById("punkte").style.backgroundColor = "rgba(201, 254, 216, 0.45)";
+    document.getElementById("punkteStr_small").style.backgroundColor = "rgba(201, 254, 216, 0.45)";
     if (points > 15) {
       upperLimit = 20;
       countdown_timer = 3;
@@ -51,9 +56,8 @@ function checkResult() {
   } else {
     //console.log("falsch");
     points = points - 2;
-    document.getElementById("punkte").style.backgroundColor =
-      "rgba(255, 166, 164, 0.45)";
-
+    document.getElementById("punkte").style.backgroundColor = "rgba(255, 166, 164, 0.45)";
+    document.getElementById("punkteStr_small").style.backgroundColor = "rgba(255, 166, 164, 0.45)";
     if (points < 0) {
       points = 0;
       //document.getElementById("punkte").style.display = "none";
@@ -69,6 +73,7 @@ function checkResult() {
 
   countdown = countdown_timer;
   form_coutndown.innerHTML = String("Countdown: " + countdown);
+  form_coutndown_small.innerHTML = String("Countdown: " + countdown);
   if (points > 0) x = setInterval(f_countdown, 1000);
 
   document.getElementById("inputEingabe").focus();
@@ -92,6 +97,7 @@ document
 function f_countdown() {
   countdown--;
   form_coutndown.innerHTML = String("Countdown: " + countdown);
+  form_coutndown_small.innerHTML = String("Countdown: " + countdown);
   if (countdown == 0) {
     document.getElementById("btn").click();
   }
